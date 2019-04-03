@@ -177,7 +177,7 @@ describe('PATCH /todos/:id', () => {
             .expect((res) => {
                 expect(res.body.todo.text).toBe(text);
                 expect(res.body.todo.completed).toBe(false);
-                expect(res.body.todo.completedAt).toBeFalsy(); // toBeA is no longer supported in expectjs -- changed to toBe and added "typeof" in front of the variable
+                expect(res.body.todo.completedAt).toBeFalsy(); // toNotExist is no longer supported in expectjs -- changed to toBeFalsy
             })
             .end(done);
     });
